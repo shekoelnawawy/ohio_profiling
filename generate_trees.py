@@ -32,4 +32,4 @@ for seed in seeds:
     clf = clf.fit(data, vulnerability)
     tree.plot_tree(clf, feature_names=column_names[:-1], filled=True, class_names=['High', 'Low'], rounded = True)
     # plt.show()
-    plt.savefig('/Trees/tree_'+str(seed), dpi=300)
+    plt.savefig('/Data/ExtractedFeatures/Trees/tree_'+str(seed), dpi=300)
