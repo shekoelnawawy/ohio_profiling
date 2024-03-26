@@ -7,17 +7,17 @@ patients = ['540', '544', '552', '567', '584', '596', 'allsubs']
 
 
 patient = patients[0]
-df_0 = joblib.load('/Data/' + patient + '/instantaneous_error.pkl')
+df_0 = joblib.load('/Data/Patients/' + patient + '/instantaneous_error.pkl')
 patient = patients[1]
-df_1 = joblib.load('/Data/' + patient + '/instantaneous_error.pkl')
+df_1 = joblib.load('/Data/Patients/' + patient + '/instantaneous_error.pkl')
 patient = patients[2]
-df_2 = joblib.load('/Data/' + patient + '/instantaneous_error.pkl')
+df_2 = joblib.load('/Data/Patients/' + patient + '/instantaneous_error.pkl')
 patient = patients[3]
-df_3 = joblib.load('/Data/' + patient + '/instantaneous_error.pkl')
+df_3 = joblib.load('/Data/Patients/' + patient + '/instantaneous_error.pkl')
 patient = patients[4]
-df_4 = joblib.load('/Data/' + patient + '/instantaneous_error.pkl')
+df_4 = joblib.load('/Data/Patients/' + patient + '/instantaneous_error.pkl')
 patient = patients[5]
-df_5 = joblib.load('/Data/' + patient + '/instantaneous_error.pkl')
+df_5 = joblib.load('/Data/Patients/' + patient + '/instantaneous_error.pkl')
 
 size = min(len(df_0), len(df_1), len(df_2), len(df_3), len(df_4), len(df_5))
 # df = numpy.array([df_0.to_numpy()[:size,:], df_1.to_numpy()[:size,:], df_2.to_numpy()[:size,:], df_3.to_numpy()[:size,:], df_4.to_numpy()[:size,:], df_5.to_numpy()[:size,:]])

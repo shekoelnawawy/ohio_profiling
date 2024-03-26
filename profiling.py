@@ -5,10 +5,10 @@ patients = ['540', '544', '552', '567', '584', '596', 'allsubs']
 
 
 for patient in patients:
-    adversarial_data = joblib.load('/Data/' + patient + '/adversarial_data.pkl')
-    benign_data = joblib.load('/Data/' + patient + '/benign_data.pkl')
-    predicted_output = np.array(joblib.load('/Data/' + patient + '/predicted_output.pkl'))
-    actual_output = np.array(joblib.load('/Data/' + patient + '/actual_output.pkl'))
+    adversarial_data = joblib.load('/Data/Patients/' + patient + '/adversarial_data.pkl')
+    benign_data = joblib.load('/Data/Patients/' + patient + '/benign_data.pkl')
+    predicted_output = np.array(joblib.load('/Data/Patients/' + patient + '/predicted_output.pkl'))
+    actual_output = np.array(joblib.load('/Data/Patients/' + patient + '/actual_output.pkl'))
 
     coefficient = np.empty([actual_output.shape[0], actual_output.shape[1]])
     magnitude = np.empty([actual_output.shape[0], actual_output.shape[1]])
@@ -49,5 +49,5 @@ for patient in patients:
             instantaneous_error[i][j] = coefficient[i][j] * magnitude[i][j]
 
     print(instantaneous_error.shape)
-    joblib.dump(instantaneous_error,'/Data/' + patient + '/instantaneous_error.pkl')
+    joblib.dump(instantaneous_error,'/Data/Patients/' + patient + '/instantaneous_error.pkl')
 
